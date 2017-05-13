@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="CoffeeShop:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/CoffeeShop_war_exploded.war</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="CoffeeShop/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="CoffeeShop" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Mojarra-1.2" />
+          <element id="library" level="project" name="primefaces-6.0" />
+          <element id="library" level="project" name="postgresql-42.0.0" />
+          <element id="library" level="project" name="eclipselink" />
+          <element id="library" level="project" name="JPA 2.0-JPA 2.0" />
+          <element id="library" level="project" name="junit:junit:4.12" />
+          <element id="library" level="project" name="javax.validation:validation-api:1.1.0.CR3" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
