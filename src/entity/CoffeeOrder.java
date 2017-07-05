@@ -1,6 +1,7 @@
 package entity;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -94,5 +95,13 @@ public class CoffeeOrder {
     @Override
     public String toString() {
         return  grade + " " + quantity + "(g) - " + cost + "$";
+    }
+
+    public String getTime() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
+        String time = "from "+ dateFormat.format(this.toDate).toString();
+        dateFormat = new SimpleDateFormat("HH:mm MM/dd/yyyy");
+        time += " to "+ dateFormat.format(this.toDate).toString();
+        return time;
     }
 }

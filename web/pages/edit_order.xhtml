@@ -8,25 +8,41 @@
       xmlns:p="http://primefaces.org/ui">
 <f:view>
     <h:head>
-        <title>Delete order</title>
+        <title>Edit Order</title>
     </h:head>
 
     <h:body>
         <h:form>
-            <p:growl id="growl" sticky="true" />
+            <p:dataTable var="CoffeeTable" value="#{CoffeeOrdersViewBean.orders}">
+                <p:column headerText="Quantity">
+                    <h:outputText value="#{CoffeeTable.quantity}" />
+                </p:column>
 
-            <p:panel header="New order">
-                <p:panelGrid columns="3" layout="grid">
-                    <h:outputText value="Coffee grade:" />
-                    <p:selectOneMenu id="grade" value="#{removalOrderBean.console}" style="width:125px">
-                        <f:selectItem itemLabel="Select One" itemValue=""/>
-                        <f:selectItems value="#{removalOrderBean.selectItemsCoffeeOrder}" />
-                    </p:selectOneMenu>
+                <p:column headerText="Grade">
+                    <h:outputText value="#{CoffeeTable.grade}" />
+                </p:column>
 
-                </p:panelGrid>
+                <p:column headerText="Time">
+                    <h:outputText value="#{CoffeeTable.time}" />
+                </p:column>
 
-            </p:panel>
+                <p:column headerText="Delivery">
+                    <h:outputText value="#{CoffeeTable.delivery}" />
+                </p:column>
+
+                <p:column headerText="Cost">
+                    <h:outputText value="#{CoffeeTable.cost}" />
+                </p:column>
+
+                <!--p:column headerText="Edit">
+                    <h:outputText value="#{car.color}" />
+                </p:column>
+
+                <p:column headerText="Removal">
+                    <h:outputText value="#{car.color}" />
+                </p:column-->
+            </p:dataTable>
         </h:form>
-    </h:body>>
+    </h:body>
 </f:view>
 </html>
